@@ -38,6 +38,4 @@ if [ ! -z ${KUSTOMIZE_IMAGE} ]; then
   echo "Set image ${PLUGIN_KUSTOMIZE_IMAGE} to ${PLUGIN_IMAGE}:${PLUGIN_VERSION}"
 fi
 
-kubectl get deployments -n testing keis-example-deployment-testing
-
 kustomize build | kubectl apply -f -
